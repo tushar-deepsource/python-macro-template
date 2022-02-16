@@ -1,5 +1,7 @@
-name = "Hackstreet Boys"
-description = "Raise my issues on deepsource"
-analysis_command = "python3 /app/analyze.py"
+name = "Add your macro name here."
+description = "Add your macro description here."
+
+# Leave these as-is
+analysis_command = "python3 /app/main.py"
 category = "language"
 visibility = "public"

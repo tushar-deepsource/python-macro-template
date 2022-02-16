@@ -4,6 +4,19 @@ import os
 import subprocess
 
 
+CODEPATH = os.getenv("CODE_PATH", "/code")
+ISSUES = []
+CURRENT_FILEPATH = ""
+
+
+def get_current_filepath() -> str:
+    return CURRENT_FILEPATH
+
+def set_current_filepath(filepath: str) -> str:
+    global CURRENT_FILEPATH
+    CURRENT_FILEPATH = filepath
+
+
 def prepare_result(issues):
     """Prepare the result for the DeepSource analyzer framework to publish."""
     return {
