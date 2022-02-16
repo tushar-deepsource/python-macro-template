@@ -1,9 +1,8 @@
-version = "1"
 name = "Add your macro name here."
 description = "Add your macro description here."
 
 # Leave these as-is
-analysis_command = "python3 /app/main.py"
+version = "1"
 category = "language"
 visibility = "public"
 
