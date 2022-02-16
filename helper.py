@@ -1,10 +1,9 @@
 import json
-import tempfile
 import os
-import subprocess
 
 
 CODEPATH = os.getenv("CODE_PATH", "/code")
+TOOLBOX_PATH = os.getenv("TOOLBOX_PATH", "/toolbox")
 ISSUES = []
 CURRENT_FILEPATH = ""
 
@@ -32,12 +31,8 @@ def publish_results(result):
     """Publish the analysis results."""
     # write results into a json file:
     print("Raising issues: ", result)
-    res_file = tempfile.NamedTemporaryFile().name
-    with open(res_file, "w") as fp:
+    with open(os.path.join(TOOLBOX_PATH, 'analysis_results.json'), "w") as fp:
         fp.write(json.dumps(result))
-
-    # publish result via marvin:
-    subprocess.run(["/toolbox/marvin", "--publish-report", res_file])
 
 
 def get_vcs_filepath(filepath):
