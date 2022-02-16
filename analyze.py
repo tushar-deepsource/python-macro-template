@@ -1,12 +1,9 @@
-import os
+from macros_sdk import *
 
-from helper import (
-    make_issue,
-    prepare_result,
-    publish_results,
-    get_files,
-)
 
-codepath = os.environ.get("CODE_PATH", "/code")
+def analyze(tree: AST) -> None:
+    """Add your AST analysis code here."""
 
-# Add your analyzer logic below
+
+def analyze_source(source_file: str) -> None:
+    """Add your source file analysis code here."""
