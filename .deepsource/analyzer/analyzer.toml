@@ -1,3 +1,4 @@
+version = "1"
 name = "Add your macro name here."
 description = "Add your macro description here."
 
@@ -5,3 +6,10 @@ description = "Add your macro description here."
 analysis_command = "python3 /app/main.py"
 category = "language"
 visibility = "public"
+
+[analyzer]
+  command = "python3 /app/main.py"
+
+[build]
+  image = "python:3.10.2-slim-buster"
+  steps = "cp -R . /app"
