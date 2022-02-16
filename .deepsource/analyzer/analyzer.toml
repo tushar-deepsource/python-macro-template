@@ -1,0 +1,5 @@
+name = "Hackstreet Boys"
+description = "Raise my issues on deepsource"
+analysis_command = "python3 /app/analyze.py"
+category = "language"
+visibility = "public"
