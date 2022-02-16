@@ -173,5 +173,6 @@ __all__ = [
     "unaryop",
     "withitem",
     # Functions to expose
+    "walk",
     "add_issue",
 ]
