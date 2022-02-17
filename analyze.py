@@ -1,7 +1,7 @@
 from macros_sdk import *
 
 
-def analyze(tree: AST) -> None:
+def analyze(tree: Module) -> None:
     """Add your AST analysis code here."""
 
 
