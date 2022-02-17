@@ -1,7 +1,7 @@
 from ast import *
 from typing import Optional
 
-from helper import make_issue
+from helper import ISSUES, get_current_filepath, make_issue
 
 
 def add_issue(
@@ -13,8 +13,6 @@ def add_issue(
     col: Optional[int] = None,
 ) -> None:
     """Adds a new issue to report."""
-    from helper import ISSUES, get_current_filepath
-
     if node is not None:
         if not isinstance(node, AST):
             raise ValueError("'node' must be an AST node")
