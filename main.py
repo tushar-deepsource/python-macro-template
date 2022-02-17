@@ -8,11 +8,17 @@ def run_analysis(filepath: str) -> None:
         source = file.read()
 
     if hasattr(analyze, "analyze") and callable(analyze.analyze):
-        tree = ast.parse(source)
-        analyze.analyze(tree)
+        try:
+            tree = ast.parse(source)
+            analyze.analyze(tree)
+        except Exception:
+            pass
 
     if hasattr(analyze, "analyze_source") and callable(analyze.analyze_source):
-        analyze.analyze_source(source)
+        try:
+            analyze.analyze_source(source)
+        except Exception:
+            pass
 
 
 if __name__ == "__main__":
